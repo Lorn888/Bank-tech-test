@@ -46,5 +46,12 @@ describe('BankAccount', ()=> {
     expect(bankAccount.statement).toStrictEqual(bankStatement);
   });
 
+  describe('#deposit', function() {
+    test('should increase the balance', ()=> {
+      bankAccount.deposit(1000.00);
+      expect(bankAccount.balance).toEqual(5000.00);
+    });
+  });
+
 
 })

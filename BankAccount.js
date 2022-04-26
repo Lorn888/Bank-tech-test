@@ -5,4 +5,10 @@ this.balance = balance
 this.statement = statement
 }
 
+BankAccount.prototype = {
+  deposit: function(amount){
+    this.balance += amount;
+  }
+};
+
 module.exports = BankAccount
