@@ -4,11 +4,12 @@ describe('Transaction', ()=>{
   let transaction
   beforeEach(()=> {
     today = new Date
+    yesterday = new Date('2022-02-01')
+
     jest
   .useFakeTimers()
-  .setSystemTime(new Date('2022-01-01').getTime());
+  .setSystemTime(new Date('2022-02-02').getTime());
     transaction = new Transaction(2000, today)
-    console.log(today)
 
   })
   test('should be defined', ()=> {
@@ -20,10 +21,10 @@ describe('Transaction', ()=>{
   test('should return amount property', ()=> {
     expect(transaction.amount).toBe(2000)
   })
-  it('should have a date property', function() {
+  test('should have a date property', ()=> {
     expect(transaction.date).toBeDefined();
   });
-  it('should have the correct date property', function() {
+  test('should have the correct date property', ()=> {
     expect(transaction.date).toBe(today);
   });
 
