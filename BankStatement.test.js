@@ -34,4 +34,5 @@ describe('BankStatement', ()=> {
   test('should have the transactions property', function() {
     expect(bankStatement.history).toStrictEqual(transactionHistory);
   });
+  
 })
