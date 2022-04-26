@@ -8,7 +8,10 @@ this.statement = statement
 BankAccount.prototype = {
   deposit: function(amount){
     this.balance += amount;
-  }
-};
+  },
+  withdraw: function(amount){
+    this.balance -= amount;
+  },
+}
 
 module.exports = BankAccount
